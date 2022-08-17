@@ -12,8 +12,8 @@ const UploadImageToS3 = () => {
   const config = {
     bucketName: "custom-labels-console-us-east-1-ffb54cee8e",
     region: "us-east-1",
-    accessKeyId: "AKIA3IDSONMNPVNE4KGA",
-    secretAccessKey: "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",
+    accessKeyId: "AKIA3IDSONMNF5ESXV5P",
+    secretAccessKey: "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",
   };
 
   const upload = (e) => {
