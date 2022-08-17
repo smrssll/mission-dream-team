@@ -8,8 +8,6 @@ require("dotenv").config();
 // window.Buffer = window.Buffer || require("buffer").Buffer;
 
 const UploadImageToS3 = () => {
-  // const [selectedFile, setSelectedFile] = useState(null);
-
   // // the configuration information is fetched from the .env file
   const config = {
     bucketName: "custom-labels-console-us-east-1-ffb54cee8e",
@@ -17,18 +15,6 @@ const UploadImageToS3 = () => {
     accessKeyId: "AKIA3IDSONMNPVNE4KGA",
     secretAccessKey: "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",
   };
-
-  // const handleFileInput = (e) => {
-  //   setSelectedFile(e.target.files[0]);
-  // };
-
-  // const uploadFile = async (file) => {
-  //   const ReactS3Client = new S3(config);
-  //   // the name of the file uploaded is used to upload it to S3
-  //   ReactS3Client.uploadFile(file, file.name)
-  //     .then((data) => console.log(data.location))
-  //     .catch((err) => console.error(err));
-  // };
 
   const upload = (e) => {
     S3FileUpload.uploadFile(e.target.files[0], config)
@@ -44,16 +30,10 @@ const UploadImageToS3 = () => {
     <>
       <div className="reveal-from-bottom" data-reveal-delay="600">
         <ButtonGroup>
-          {/* <form> */}
           <input onChange={upload} type="file" />
-          <Button
-            onClick={() => upload()}
-            color="primary"
-            // type="submit"
-          >
+          <Button onClick={() => upload()} color="primary">
             Upload
           </Button>
-          {/* </form> */}
         </ButtonGroup>
       </div>
       <div
