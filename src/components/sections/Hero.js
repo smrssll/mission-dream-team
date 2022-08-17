@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 // import { SectionProps } from "../../utils/SectionProps";
 import UploadImageToS3 from "./Uploadtos3";
 
-//Click function for upload button
-const UploadClick = (e) => {
-  e.preventDefault();
-  console.log("you clicked the upload button");
-};
+// //Click function for upload button
+// const UploadClick = (e) => {
+//   e.preventDefault();
+//   console.log("you clicked the upload button");
+// };
 
 const Hero = ({
   className,
