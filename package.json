@@ -6,7 +6,6 @@
     "aws-sdk": "^2.1196.0",
     "buffer": "^6.0.3",
     "classnames": "^2.2.6",
-    "dotenv": "^16.0.1",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-aws-s3": "^1.5.0",
@@ -41,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    
   }
 }
