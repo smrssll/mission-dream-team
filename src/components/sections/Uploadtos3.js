@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-// import S3 from "react-aws-s3";
 import S3FileUpload from "react-s3";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
-import secrets from "./secrets"
-
-// window.Buffer = window.Buffer || require("buffer").Buffer;
+import secrets from "./secrets";
 
 const UploadImageToS3 = () => {
   const config = secrets;
@@ -33,8 +30,7 @@ const UploadImageToS3 = () => {
       <div
         className="container-xs reveal-from-bottom container_hello"
         data-reveal-delay="700"
-      >
-      </div>
+      ></div>
     </>
   );
 };
