@@ -16,7 +16,8 @@ const client = new RekognitionClient({
 });
 
 const UploadImageToS3 = () => {
-  const [text, setText] = useState('Rekognition response');
+  const [text, setText] = useState('Rekognition flower name  will display here');
+  const [text2, setText2] = useState('Rekognition leaves/no leaves will display here');
   const config = secrets;
 
   const upload = (e) => {
@@ -39,8 +40,11 @@ const UploadImageToS3 = () => {
         });
         client.send(command).then(
           (data) => {
-            setText(data.CustomLabels)
+            setText(`flower: ${data.CustomLabels[0].Name}`)
+            setText2(`leaves: ${data.CustomLabels[1].Name}`)
           console.log(data, "data")
+          console.log(data.CustomLabels[0].Name, "response 1")
+          console.log(data.CustomLabels[1].Name, "response 2")
           },
           (error) => {
           console.log(error, "Error")
@@ -62,9 +66,13 @@ const UploadImageToS3 = () => {
           </Button>
         </ButtonGroup>
       </div>
-      <h3>
+      <br></br>
+      <h4>
         {text}
-      </h3>
+      </h4>
+      <h4>
+        {text2}
+      </h4>
       <div
         className="container-xs reveal-from-bottom container_hello"
         data-reveal-delay="700"

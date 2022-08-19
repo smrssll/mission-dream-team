@@ -44,7 +44,7 @@ const Hero = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              Find the car you have been{" "}
+              Find the flower you have been{" "}
               <span className="text-color-primary">looking</span> for.
             </h1>
             <div className="container-xs">
