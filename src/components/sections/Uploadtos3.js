@@ -16,6 +16,7 @@ const client = new RekognitionClient({
 });
 
 const UploadImageToS3 = () => {
+  const [text, setText] = useState('Rekognition response');
   const config = secrets;
 
   const upload = (e) => {
@@ -38,6 +39,7 @@ const UploadImageToS3 = () => {
         });
         client.send(command).then(
           (data) => {
+            setText(data.CustomLabels)
           console.log(data, "data")
           },
           (error) => {
@@ -60,6 +62,9 @@ const UploadImageToS3 = () => {
           </Button>
         </ButtonGroup>
       </div>
+      <h3>
+        {text}
+      </h3>
       <div
         className="container-xs reveal-from-bottom container_hello"
         data-reveal-delay="700"
