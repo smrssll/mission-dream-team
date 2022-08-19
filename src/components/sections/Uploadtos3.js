@@ -14,6 +14,7 @@ const client = new RekognitionClient({
   }
 });
 
+
 const UploadImageToS3 = () => {
   const [text, setText] = useState('Rekognition flower name  will display here');
   const [text2, setText2] = useState('Rekognition leaves/no leaves will display here');
@@ -75,8 +76,7 @@ const UploadImageToS3 = () => {
       <div
         className="container-xs reveal-from-bottom container_hello"
         data-reveal-delay="700"
-      >
-      </div>
+      ></div>
     </>
   );
 };
