@@ -3,6 +3,5 @@ This project is a showcase of AWS rekognition and S3 bucket connected to a react
 Mission 2 in the Advance Software Developer course from Mission Ready. 
 
 Team:
-Nicolas
+Nicolas &
 Sellyna
-Sam
