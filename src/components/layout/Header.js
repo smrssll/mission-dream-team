@@ -87,6 +87,7 @@ const Header = ({
             bottomDivider && "has-bottom-divider"
           )}
         >
+          <Logo />
           {!hideNav && (
             <>
               <button
@@ -101,8 +102,41 @@ const Header = ({
               </button>
               <nav
                 ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
-              ></nav>
+                className={classNames(
+                  "header-nav",
+                  isActive && "is-active",
+                  "reveal-from-bottom"
+                )}
+              >
+                <div className="header-nav-inner">
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs header-nav-right",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/PolicySearch">Queries</Link>
+                    </li>
+                  </ul>
+                  {!hideSignin && (
+                    <ul className="list-reset header-nav-right">
+                      <li>
+                        <Link
+                          to="#0"
+                          className="button button-primary button-wide-mobile button-sm"
+                          onClick={closeMenu}
+                        >
+                          Sign up
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              </nav>
             </>
           )}
         </div>
