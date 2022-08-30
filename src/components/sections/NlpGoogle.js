@@ -53,7 +53,7 @@ const NlpGoogle = () => {
       <div
         className="container-xs reveal-from-bottom container_hello"
         data-reveal-delay="700"
-      >
+      > <h6>{text}</h6>
       </div>
     </>
   );
