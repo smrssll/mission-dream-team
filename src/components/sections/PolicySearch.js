@@ -2,10 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import Input from "../elements/Input";
 import Button from "../elements/Button";
-<<<<<<< HEAD
-=======
 import axios from "axios";
->>>>>>> c9b8c8349aee5dae2cb453ee5f12a2ff0d10eb2d
+
 
 const PolicySearch = ({
   className,
