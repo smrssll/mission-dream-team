@@ -9,8 +9,8 @@ import { RekognitionClient, DetectCustomLabelsCommand } from "@aws-sdk/client-re
 const client = new RekognitionClient({ 
   region: "us-east-1",
   credentials: {
-    accessKeyId: secrets.accessKeyId,
-    secretAccessKey: secrets.secretAccessKey,
+    //accessKeyId: secrets.accessKeyId,
+    //secretAccessKey: secrets.secretAccessKey,
   }
 });
 
@@ -18,7 +18,7 @@ const client = new RekognitionClient({
 const UploadImageToS3 = () => {
   const [text, setText] = useState('Rekognition flower name  will display here');
   const [text2, setText2] = useState('Rekognition leaves/no leaves will display here');
-  const config = secrets;
+  //const config = secrets;
 
   const upload = (e) => {
     const filename = e.target.files[0]
@@ -31,7 +31,7 @@ const UploadImageToS3 = () => {
         const command = new DetectCustomLabelsCommand({
           "Image": {
             "S3Object": {
-              "Bucket": secrets.bucketName,
+              //"Bucket": secrets.bucketName,
               "Name": name
               }
           },
