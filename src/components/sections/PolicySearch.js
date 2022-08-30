@@ -79,10 +79,6 @@ const PolicySearch = ({
             <span className="text-color-primary">below</span>.
           </h3>
         </div>
-<<<<<<< HEAD
-        <Input id="query" type="text" placeholder="Search our policies"></Input>
-        <Button color="primary"></Button>
-=======
         <Input
           id="query"
           type="text"
@@ -95,7 +91,6 @@ const PolicySearch = ({
         <h6>
           <div id="answer"></div>
         </h6>
->>>>>>> c9b8c8349aee5dae2cb453ee5f12a2ff0d10eb2d
       </div>
     </section>
   );
