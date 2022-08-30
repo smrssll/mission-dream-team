@@ -24,7 +24,7 @@ const UploadImageToS3 = () => {
     const filename = e.target.files[0]
     const name = filename.name
     console.log("filename: ", filename, name)
-    S3FileUpload.uploadFile(filename, config)
+    //S3FileUpload.uploadFile(filename, config)
       .then((data) => {
         console.log(data.location);
         console.log("upload resp: ", data);
