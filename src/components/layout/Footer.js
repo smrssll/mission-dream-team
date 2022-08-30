@@ -34,7 +34,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <div className="footer-copyright">
-              Made by <a>The Dream Team</a>. All right reserved to the
+              Made by The Dream Team. All right reserved to the
               5 members.
             </div>
           </div>
