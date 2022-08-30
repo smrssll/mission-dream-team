@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import S3FileUpload from "react-s3";
+//import S3FileUpload from "react-s3";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 //import secrets from "./secrets"
