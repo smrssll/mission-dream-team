@@ -12,7 +12,9 @@ import Home from "./views/Home";
 import PolicySearch from "./components/sections/PolicySearch";
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize("UA-132839204-1", {
+  testMode: process.env.REACT_APP_GA_CODE === "test",
+});
 
 const trackPage = (page) => {
   ReactGA.set({ page });
